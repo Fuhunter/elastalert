@@ -112,7 +112,7 @@ def main():
     if not index:
         index = 'elastalert_status'
 
-    old_index = (args.old_index if args.old_index is not None
+    old_index = (args.old_index if args.old_index is None
                  else raw_input('Name of existing index to copy? (Default None) '))
 
     es_index = IndicesClient(es)
